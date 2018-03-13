@@ -2,7 +2,7 @@
 
 Todos application build on Rails 5 + Foundation + jQuery 
 
-  [Live app]()
+  [Live app](https://todos-rails-5-jquery.herokuapp.com/)
 
 Application versions installed: 
 
@@ -18,9 +18,9 @@ Prepare:
 
 Other similar sources: 
   - [Rails 5 + Foundation + jQuery](https://github.com/sieudang2002/todo-rails-foundation-jquery.git)
-  - [Rails 5 + Foundation + Anguarljs 1.x]()
-  - [Rails 5 + Foundation + Anguarljs 2.x]()
-  - [Rails 5 + Foundation + Reactjs]()
-  - [Rails 5 + Foundation + Knockoutjs]()
-  - [Rails 5 + Foundation + Emberjs]()
+  - [Rails 5 + Foundation + Anguarljs 1.x]
+  - [Rails 5 + Foundation + Anguarljs 2.x]
+  - [Rails 5 + Foundation + Reactjs]
+  - [Rails 5 + Foundation + Knockoutjs]
+  - [Rails 5 + Foundation + Emberjs]
 
