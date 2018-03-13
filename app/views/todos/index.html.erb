@@ -1,0 +1,54 @@
+<div class="row">
+  <div class="small-11 medium-10 medium-centered small-centered columns">
+    <p id="notice"><%= notice %></p>
+
+    <h1>Todos</h1>
+
+    <table class="table striped hover todos" >
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th width="100"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @todos.each do |todo| %>
+          <tr data-id="<%=todo.id%>">
+            <td><%= generate_item(todo) %></td>
+            <td>
+              <a href="#" data-id="<%=todo.id%>" class="complete-task"><i class="fi-check"></i></a> | 
+              <a href="#" data-id="<%=todo.id%>" class="delete-task"><i class="fi-trash"></i></a>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    
+    <%= form_tag('/todos', method: 'post', remote: true, class: 'new-todo', id: 'new-form') do %>
+      <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+          <div class="small-4 cell">
+            <%= text_field_tag "todo[title]", "", id: :todo_title, required: true %>
+          </div>
+
+          <div class="small-3 cell">
+            <%= label_tag "complete?" %>
+            <%= check_box_tag "todo[is_complete]", nil, false, id: :todo_is_complete %>
+          </div>
+
+          <div class="small-3 cell">
+            <%= label_tag "important?" %>
+            <%= check_box_tag "todo[is_important]", nil, false, id: :todo_is_important %>
+          </div>
+          <div class="small-2 cell">
+            <%= submit_tag 'Add', class: 'button primary' %> 
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+    
+  </div>
+</div>

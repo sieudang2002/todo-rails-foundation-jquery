@@ -1,0 +1,13 @@
+<% if @todo.errors.any? %>
+  var error = unescapeHTML('<%= @todo.errors.full_messages.join("") -%>');
+  alert("Something went wrong, " + error);
+<% else %>
+  var new_todo = '<tr data-id="<%=@todo.id%>"> \
+            <td><%= generate_item(@todo) %></td> \
+            <td> \
+              <a href="#" data-id="<%=@todo.id%>" class="complete-task"><i class="fi-check"></i></a> | \
+              <a href="#" data-id="<%=@todo.id%>" class="delete-task"><i class="fi-trash"></i></a> \
+            </td> \
+          </tr>'
+  $("table.todos tbody").append(new_todo);
+<% end %>
