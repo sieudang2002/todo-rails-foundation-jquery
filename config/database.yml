@@ -28,5 +28,5 @@ test:
 
 production:
   <<: *default
-  database: todos_rails_prod
+  database: <%=ENV['DATABASE_NAME']%>
   host: <%=ENV['DATABASE_URL']%>
